@@ -1,2 +1,4 @@
 
-//console.log("Group 2")
+// Imports
+const express = require('express');
+const mongoose = require('mongoose');
