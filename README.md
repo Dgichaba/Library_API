@@ -1,6 +1,6 @@
 # Library_API
 ## Description
-This repository contains a book Libray API for adding books that have been published to the library, getting the list of books published to the library and individual book descriptions, modifying/ updating the  library and deleting books that we no longer want to keep in the library.
+This repository contains a book Library API for adding books that have been published to the library, getting the list of books published to the library and individual book descriptions, modifying/ updating the  library and deleting books that we no longer want to keep in the library.
 ## Setup/Installation Requirements
 * Visual Studio Code
 * Git
