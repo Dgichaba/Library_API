@@ -31,6 +31,17 @@ router.post('/post', async (req, res) => {
     }
 })
 
+//Get by ID Method
+router.get('/getOne/:id', async (req, res) => {
+    try{
+        const data = await model.findById(req.params.id);
+        res.json(data)
+    }
+    catch(error){
+        res.status(500).json({message: error.message})
+    }
+})
+
 //UPDATE
 
 router.patch('/patch', async (req, res) => {
