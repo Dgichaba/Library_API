@@ -59,6 +59,15 @@ router.patch('/patch', async (req, res) => {
 });
 
 // DELETE
-
+router.delete('/delete/:id', async (req, res) => {
+  try {
+      const id = req.params.id;
+      const data = await model.findByIdAndDelete(id)
+      res.status(200).json(data);
+  }
+  catch (error) {
+      res.status(400).json({ message: error.message })
+  }
+})
 
 module.exports=router;
