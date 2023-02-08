@@ -44,14 +44,14 @@ router.get('/getOne/:id', async (req, res) => {
 
 //UPDATE
 
-router.patch('/patch', async (req, res) => {
+router.patch('/patch/:id', async (req, res) => {
     const id = req.params.id;
     const updatedData = req.body;
     console.log(id)
     console.log(updatedData)
 
     try {
-        const dataUpdate = await new model.findByIdAndUpdate(id, updatedData, { new: true });
+        const dataUpdate = await model.findByIdAndUpdate(id, updatedData, { new: true });
         res.status(200).json(dataUpdate);
     } catch (error) {
         res.status(400).json({ message: error.message });
