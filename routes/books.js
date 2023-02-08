@@ -1,11 +1,11 @@
-const express = require("express");
-const mongoose = require('mongoose');
-const library= require ("../models/library");
+const express = require('express');
+const model = require('./../models/library');
+
 const router = express.Router();
 
-// Get API endpoint
-router.get('/', async function (req,res) {
-    res.send("Welcome to Group number 2");
+router.get('/', function(req, res){
+  res.send("Get a list of books");
 });
 
-module.exports = router;
+// CRUD Operations
+module.exports=router;
